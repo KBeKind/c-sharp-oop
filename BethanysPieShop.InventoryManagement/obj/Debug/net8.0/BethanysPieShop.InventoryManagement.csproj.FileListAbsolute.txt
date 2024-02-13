@@ -1,0 +1,15 @@
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.AssemblyInfoInputs.cache
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.AssemblyInfo.cs
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.csproj.CoreCompileInputs.cache
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.sourcelink.json
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\bin\Debug\net8.0\BethanysPieShop.InventoryManagement.exe
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\bin\Debug\net8.0\BethanysPieShop.InventoryManagement.deps.json
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\bin\Debug\net8.0\BethanysPieShop.InventoryManagement.runtimeconfig.json
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\bin\Debug\net8.0\BethanysPieShop.InventoryManagement.dll
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\bin\Debug\net8.0\BethanysPieShop.InventoryManagement.pdb
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.dll
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\refint\BethanysPieShop.InventoryManagement.dll
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.pdb
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\BethanysPieShop.InventoryManagement.genruntimeconfig.cache
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\CSharp-OOP\BethanysPieShop.InventoryManagement\obj\Debug\net8.0\ref\BethanysPieShop.InventoryManagement.dll

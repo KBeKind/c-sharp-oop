@@ -4,7 +4,7 @@ using BethanysPieShop.InventoryManagement.Domain.General;
 
 namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 {
-    public class Product
+    public partial class Product
     {
         private int Id { get; set; }
         private string Name { get; set; }
