@@ -12,6 +12,14 @@ namespace BethanysPieShop.InventoryManagement.Domain.General
         public Currency Currency { get; set; }
 
 
+		public Price() { }
+
+		public Price(double itemPrice, Currency currency)
+		{
+			ItemPrice = itemPrice;
+			Currency = currency;
+		}
+
 		public override string ToString()
 		{
 			return $"{ItemPrice} {Currency}";
