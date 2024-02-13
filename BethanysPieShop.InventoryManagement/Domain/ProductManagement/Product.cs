@@ -6,9 +6,11 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 {
     public partial class Product
     {
+        public static int StockThreshold { get; private set; } = 10;
+
         private int Id { get; set; }
         private string Name { get; set; }
-        private string? Description { get; set; }
+        public string? Description { get; set; }
 
         private int MaxItemsInStock { get; set; }
 
@@ -18,19 +20,18 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 
         private Price Price { get; set; }
 
+        public Product(int id) : this(id, string.Empty, new Price(0, Currency.Euro)) { }
 
 
-        public Product(int id) : this(id, string.Empty) { }
-
-
-        public Product(int id, string name)
+        public Product(int id, string name, Price price)
         {
             Id = id;
             MaxItemsInStock = 100;
             Name = name;
+            Price = price;
         }
 
-        public Product(int id, string name, string? description, Price price, int maxItemsInStock, UnitType unitType)
+        public Product(int id, string name, string? description, Price price, UnitType unitType, int maxItemsInStock)
         {
             Id = id;
             Name = name;
@@ -40,8 +41,6 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
             Price = price;
 
             UpdateLowStock();
-
-
         }
 
 
@@ -80,7 +79,7 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
                 Log($"{CreateSimpleProductRepresentation} stock overflow.  {newStock - AmountInStock} item(s) ordered that couldn't be stored.");
             }
 
-            if (AmountInStock > 10)
+            if (AmountInStock > StockThreshold)
             {
                 IsBelowStockTreshold = false;
             }
@@ -124,6 +123,14 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
             return sb.ToString();
         }
 
+
+        public static void ChangeStockThreshold(int threshold)
+        {
+            if (threshold > 0)
+            {
+                StockThreshold = threshold;
+            }
+        }
 
 
     }
