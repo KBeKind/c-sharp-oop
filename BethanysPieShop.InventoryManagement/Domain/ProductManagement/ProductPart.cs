@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
+{
+	internal partial class Product
+	{
+
+		private void UpdateLowStock()
+		{
+			if (AmountInStock < 10)
+			{
+				IsBelowStockTreshold = true;
+			}
+		}
+
+
+		private void Log(string message)
+		{
+			Console.WriteLine(message);
+		}
+
+		private string CreateSimpleProductRepresentation()
+		{
+			return $"Product {Id} ({Name})";
+		}
+
+
+	}
+}
