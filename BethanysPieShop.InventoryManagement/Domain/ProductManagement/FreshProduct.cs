@@ -36,6 +36,12 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 			return sb.ToString();
 		}
 
+		public override void IncreaseStock()
+		{
+			AmountInStock++;
+		}
+
+
 	}
 
 

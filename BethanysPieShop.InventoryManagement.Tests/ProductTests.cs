@@ -9,7 +9,7 @@ namespace BethanysPieShop.InventoryManagement.Tests
 		public void UseProduct_Reduces_AmountInStock()
 		{
 			// ARRANGE
-			Product product = new Product(1, "Sugar", "Some Sugar", new Price() {ItemPrice = 10, Currency = Currency.Dollar}, UnitType.PerKg, 100);
+			RegularProduct product = new RegularProduct(1, "Sugar", "Some Sugar", new Price() {ItemPrice = 10, Currency = Currency.Dollar}, UnitType.PerKg, 100);
 			product.IncreaseStock(100);
 
 			// ACT
@@ -24,7 +24,7 @@ namespace BethanysPieShop.InventoryManagement.Tests
 		public void UseProduct_ItemsHigherThanStock_NoChangeToStock()
 		{
 			// ARRANGE
-			Product product = new Product(1, "Sugar", "Some Sugar", new Price() { ItemPrice = 10, Currency = Currency.Dollar }, UnitType.PerKg, 100);
+			RegularProduct product = new RegularProduct(1, "Sugar", "Some Sugar", new Price() { ItemPrice = 10, Currency = Currency.Dollar }, UnitType.PerKg, 100);
 			product.IncreaseStock(10);
 
 			// ACT

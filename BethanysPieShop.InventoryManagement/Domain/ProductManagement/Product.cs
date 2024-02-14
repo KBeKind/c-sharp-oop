@@ -4,7 +4,7 @@ using BethanysPieShop.InventoryManagement.Domain.General;
 
 namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 {
-    public partial class Product
+    public abstract partial class Product
     {
         public static int StockThreshold { get; set; } = 10;
 
@@ -18,7 +18,7 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
         public int AmountInStock { get; protected set; } = 0;
         public bool IsBelowStockTreshold { get; set; } = false;
 
-        private Price Price { get; set; }
+        public Price Price { get; set; }
 
         public Product(int id) : this(id, string.Empty, new Price(0, Currency.Euro)) { }
 
@@ -60,10 +60,12 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
             }
         }
 
-        public virtual void IncreaseStock()
-        {
-            AmountInStock++;
-        }
+        public abstract void IncreaseStock();
+
+        //public virtual void IncreaseStock()
+        //{
+        //    AmountInStock++;
+        //}
 
         public virtual void IncreaseStock(int amount)
         {
