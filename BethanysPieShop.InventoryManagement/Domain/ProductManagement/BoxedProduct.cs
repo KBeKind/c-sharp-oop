@@ -66,7 +66,7 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 				Log($"{CreateSimpleProductRepresentation} stock overflow. {newStock - AmountInStock} item(s) ordered that couldn't be stored.");
 			}
 
-			base.IncreaseStock();
+			
 		}
 
 

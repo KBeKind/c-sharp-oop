@@ -79,7 +79,7 @@ namespace BethanysPieShop.InventoryManagement
 						unitType = UnitType.PerItem;//default value
 					}
 
-					Product product = new Product(productId, name, description, new Price() { ItemPrice = itemPrice, Currency = currency }, unitType, maxItemsInStock);
+					RegularProduct product = new RegularProduct(productId, name, description, new Price() { ItemPrice = itemPrice, Currency = currency }, unitType, maxItemsInStock);
 
 
 					products.Add(product);

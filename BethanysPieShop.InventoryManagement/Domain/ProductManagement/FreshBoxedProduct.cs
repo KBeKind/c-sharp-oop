@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 {
-	internal class FreshBoxedProduct : BoxedProduct
+	public sealed class FreshBoxedProduct : BoxedProduct
 	{
 		public FreshBoxedProduct(int id, string name, string? description, Price price, int maxItemsInStock, int amountPerBox) : base(id, name, description, price, maxItemsInStock, amountPerBox)
 		{

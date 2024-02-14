@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 {
-	public partial class Product
+	public abstract partial class Product
 	{
 
 		public void UpdateLowStock()
