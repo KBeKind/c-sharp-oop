@@ -6,17 +6,17 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 {
     public partial class Product
     {
-        public static int StockThreshold { get; private set; } = 10;
+        public static int StockThreshold { get; set; } = 10;
 
-        private int Id { get; set; }
-        private string Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string? Description { get; set; }
 
-        private int MaxItemsInStock { get; set; }
+        public int MaxItemsInStock { get; set; }
 
         private UnitType UnitType { get; set; }
-        private int AmountInStock { get; set; } = 0;
-        private bool IsBelowStockTreshold { get; set; } = false;
+        public int AmountInStock { get; protected set; } = 0;
+        public bool IsBelowStockTreshold { get; set; } = false;
 
         private Price Price { get; set; }
 
@@ -44,7 +44,7 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
         }
 
 
-        public void UseProduct(int items)
+        public virtual void UseProduct(int items)
         {
             if (items <= AmountInStock)
             {
@@ -60,12 +60,12 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
             }
         }
 
-        public void IncreaseStock()
+        public virtual void IncreaseStock()
         {
             AmountInStock++;
         }
 
-        public void IncreaseStock(int amount)
+        public virtual void IncreaseStock(int amount)
         {
             int newStock = AmountInStock + amount;
 
@@ -85,7 +85,7 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
             }
         }
 
-        public void DecreaseStock(int items, string reason)
+        protected virtual void DecreaseStock(int items, string reason)
         {
             if (items <= AmountInStock)
             {
@@ -99,17 +99,17 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
             Log(reason);
         }
 
-        public string DisplayDetailsShort()
+        public virtual string DisplayDetailsShort()
         {
             return $"{Id}. {Name} \n {AmountInStock} items in stock.";
         }
 
-        public string DisplayDetailsFull()
+        public virtual string DisplayDetailsFull()
         {
             return DisplayDetailsFull("");
         }
 
-        public string DisplayDetailsFull(string extraDetails)
+        public virtual string DisplayDetailsFull(string extraDetails)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append($"{Id} {Name} \n{Description}\n{Price}\n{AmountInStock} item(s) in stock.");

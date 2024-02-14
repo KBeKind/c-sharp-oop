@@ -9,7 +9,7 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 	public partial class Product
 	{
 
-		private void UpdateLowStock()
+		public void UpdateLowStock()
 		{
 			if (AmountInStock < 10)
 			{
@@ -18,12 +18,12 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 		}
 
 
-		private void Log(string message)
+		protected void Log(string message)
 		{
 			Console.WriteLine(message);
 		}
 
-		private string CreateSimpleProductRepresentation()
+		protected string CreateSimpleProductRepresentation()
 		{
 			return $"Product {Id} ({Name})";
 		}

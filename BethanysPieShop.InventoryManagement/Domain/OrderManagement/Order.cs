@@ -28,6 +28,18 @@ namespace BethanysPieShop.InventoryManagement.Domain.OrderManagement
 			OrderItems = new List<OrderItem>();
 		}
 
+		public string ShowOrderDetails()
+		{
+			StringBuilder sb = new StringBuilder();
 
+			sb.AppendLine($"Order Id: {Id}, Order Fulfilment Date: {OrderFulfilmentDate}");
+			sb.AppendLine("Order Items:");
+			foreach (var item in OrderItems)
+			{
+				sb.AppendLine(item.ToString());
+			}
+
+			return sb.ToString();
+		}
 	}
 }

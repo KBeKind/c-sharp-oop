@@ -1,25 +1,46 @@
-﻿using BethanysPieShop.InventoryManagement.Domain.General;
+﻿using BethanysPieShop.InventoryManagement;
+using BethanysPieShop.InventoryManagement.Domain.General;
 using BethanysPieShop.InventoryManagement.Domain.ProductManagement;
-using System.Collections.Concurrent;
 
+PrintWelcome();
 
+Utilities.InitializeStock();
 
+Utilities.ShowMainMenu();
 
-Price price = new Price(100.88, Currency.Euro);
+Console.WriteLine("Application shutting down...");
 
-var price2 = new Price() { ItemPrice = 88.23, Currency = Currency.Euro };
+Console.ReadLine();
 
+#region Layout
 
-Product product1 = new(1, "Sugar", "Stuffwords", price, UnitType.PerKg, 100);
+static void PrintWelcome()
+{
 
-var product2 = new Product(2, "Chocolate", "DescriptionStuffwords", price2, UnitType.PerKg, 100);
+	Console.ForegroundColor = ConsoleColor.Yellow;
+	Console.WriteLine(@"
+    ()()()()()()   ____       _   _                       _       _____ _         _____ _                                        
+    |\         |  |  _ \     | | | |                     ( )     |  __ (_)       / ____| |                                         ()()()()()()
+    |.\. . . . |  | |_) | ___| |_| |__   __ _ _ __  _   _|/ ___  | |__) |  ___  | (___ | |__   ___  _ __                           |\         |
+    \'.\       |  |  _ < / _ \ __| '_ \ / _` | '_ \| | | | / __| |  ___/ |/ _ \  \___ \| '_ \ / _ \| '_ \                          |.\. . . . |
+     \.:\ . . .|  | |_) |  __/ |_| | | | (_| | | | | |_| | \__ \ | |   | |  __/  ____) | | | | (_) | |_) |                         \'.\       |
+      \'o\     |  |____/ \___|\__|_| |_|\__,_|_| |_|\__, | |___/ |_|__ |_|\___| |_____/|_| |_|\___/| .__/                    _      \.:\ . . .|
+       \.'\. . |  |_   _|                    | |     __/ |         |  \/  |                        | |                      | |      \'o\     |
+        \'.\   |    | |  _ ____   _____ _ __ | |_ __|___/__ _   _  | \  / | __ _ _ __   __ _  __ _ |_|_ _ __ ___   ___ _ __ | |_      \.'\. . |
+         \'`\ .|    | | | '_ \ \ / / _ \ '_ \| __/ _ \| '__| | | | | |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '_ ` _ \ / _ \ '_ \| __|      \'.\   |
+          \.'\ |   _| |_| | | \ V /  __/ | | | || (_) | |  | |_| | | |  | | (_| | | | | (_| | (_| |  __/ | | | | |  __/ | | | |_        \'`\ .|
+           \__\|  |_____|_| |_|\_/ \___|_| |_|\__\___/|_|   \__, | |_|  |_|\__,_|_| |_|\__,_|\__, |\___|_| |_| |_|\___|_| |_|\__|        \.'\ |
+                                                             __/ |                            __/ |                                       \__\|
+                                                            |___/                            |___/                               
+    ");
 
-product1.IncreaseStock();
+	Console.ResetColor();
 
-product1.Description = "New Product Description";
+	Console.WriteLine("Press enter key to start logging in!");
 
-Console.WriteLine(product1.DisplayDetailsFull());
+	//accepting enter here
+	Console.ReadLine();
 
-Console.WriteLine("*******************");
-
-Console.WriteLine(product2.DisplayDetailsFull()	);
+	Console.Clear();
+}
+#endregion
