@@ -1,4 +1,5 @@
-﻿using BethanysPieShop.InventoryManagement.Domain.General;
+﻿using BethanysPieShop.InventoryManagement.Domain.Contracts;
+using BethanysPieShop.InventoryManagement.Domain.General;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 {
-	public class BoxedProduct : Product
+	public class BoxedProduct : Product, ISaveable
 	{
 		private int AmountPerBox { get; set; }
 
@@ -70,6 +71,10 @@ namespace BethanysPieShop.InventoryManagement.Domain.ProductManagement
 		}
 
 
+		public string ConvertToStringForSaving()
+		{
+			return $"{Id};{Name};{Description};{Price.ItemPrice};{Price.Currency};1;{AmountPerBox};";
+		}
 
 
 	}
